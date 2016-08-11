@@ -10,7 +10,7 @@ $dir = 'html';
 
 foreach (scandir($dir) as $f) if (substr($f,-5,5)=='.html') {
 	echo "\n- $f";
-	$htm2 = superClen("$dir/$f",false);
+	$htm2 = superClen("$dir/$f",true);
 	file_put_contents("html_clean/$f",$htm2);
 }
 
